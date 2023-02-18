@@ -16,13 +16,13 @@ namespace TestProjectJupiter
             
             // verify all required error messages
             var errorValue = driver.FindElement(By.Id("forename-err")).Text;
-            Assert.IsTrue(errorValue.Equals("Forename is required"), errorValue + "doesnt display 'Forename is required'");
+            Assert.IsTrue(errorValue.Equals("Forename is required"), "should display 'Forename is required'");
             errorValue = driver.FindElement(By.Id("email-err")).Text;
-            Assert.IsTrue(errorValue.Equals("Email is required"), errorValue + "doesnt display 'Email is required'");
+            Assert.IsTrue(errorValue.Equals("Email is required"), "should display 'Email is required'");
             errorValue = driver.FindElement(By.Id("message-err")).Text;
-            Assert.IsTrue(errorValue.Equals("Message is required"), errorValue + "doesnt display 'Message is required'");
+            Assert.IsTrue(errorValue.Equals("Message is required"), "should display 'Message is required'");
             var headerError = driver.FindElement(By.Id("header-message")).Text;
-            Assert.IsTrue(headerError.Equals("We welcome your feedback - but we won't get it unless you complete the form correctly."), headerError + "doesnt display 'but we wont get it unless you complete the form correctly'");
+            Assert.IsTrue(headerError.Equals("We welcome your feedback - but we won't get it unless you complete the form correctly."), "should display 'but we wont get it unless you complete the form correctly'");
             
             // verify a invalid email error
             this.EnterEmail("david");
