@@ -42,11 +42,11 @@ namespace TestProjectJupiter
             
             // Verify validation errors disappear
             var checkValidControl = driver.FindElement(By.Id("forename")).GetAttribute("class");
-            Assert.IsTrue(checkValidControl.Contains("valid"), "Control should not show error message");
+            Assert.IsTrue(checkValidControl.Contains("ng-valid"), "Control should not show error message");
             checkValidControl = driver.FindElement(By.Id("email")).GetAttribute("class");
-            Assert.IsTrue(checkValidControl.Contains("valid"), "Control should not show error message");
+            Assert.IsTrue(checkValidControl.Contains("ng-valid"), "Control should not show error message");
             checkValidControl = driver.FindElement(By.Id("message")).GetAttribute("class");
-            Assert.IsTrue(checkValidControl.Contains("valid"), "Control should not show error message");
+            Assert.IsTrue(checkValidControl.Contains("ng-valid"), "Control should not show error message");
         }
     }
 }
