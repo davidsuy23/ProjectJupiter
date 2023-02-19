@@ -5,7 +5,6 @@ namespace TestProjectJupiter
 {
     public class TestCase3 : TestBase
     {
-       
         [Test]
         [Category("CICD")]
         public void Test3()
@@ -20,21 +19,21 @@ namespace TestProjectJupiter
 
             this.wait.Until(driver => driver.FindElement(By.LinkText("Start Shopping »")));
             this.NavigateToStartShopping();
-            // 2 Stuffed Frogs
+            // Purchase 2 Stuffed Frogs
             var i = 0;
             while(i != 2)
             {
                 this.BuyStuffedFrog();
                 i++;
             }
-            // 5 Fluffly Bunnys
+            // Purchase 5 Fluffly Bunnys
             i = 0;
             while (i != 5)
             {
                 this.BuyFluffyBunny();
                 i++;
             }
-            // 3 Valentine Bear
+            // Purchase 3 Valentine Bears
             i = 0;
             while (i != 3)
             {

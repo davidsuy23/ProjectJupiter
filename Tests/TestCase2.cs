@@ -17,6 +17,7 @@ namespace TestProjectJupiter
             this.ClickSubmit();
             this.wait.Until(driver => driver.FindElement(By.LinkText("« Back")));
             var checkBannerText = driver.FindElement(By.XPath("/html/body/div[2]/div/div")).Text;
+            //Verify successful submission message appears
             Assert.IsTrue(checkBannerText.Equals("Thanks David, we appreciate your feedback."), checkBannerText + "instead of 'Thanks David, we appreaciate your feedback'");
         }
     }
